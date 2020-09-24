@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <el-container direction="vertical">
+      <my-header/>
+      <el-container style="min-height: 620px; font-family:Open Sans, PingFang SC, Hiragino Sans GB, Microsoft Yahei, Microsoft Jhenghei, sans-serif">
+        <router-view/>
+      </el-container>
+      <my-footer/>
+    </el-container>
   </div>
 </template>
 
@@ -30,3 +32,10 @@
   color: #42b983;
 }
 </style>
+<script>
+  import MyFooter from "./components/MyFooter";
+  import MyHeader from "./components/MyHeader";
+  export default {
+    components: {MyHeader, MyFooter}
+  }
+</script>
