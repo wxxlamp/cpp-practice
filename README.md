@@ -1,2 +1,2 @@
 # cpp-priactice
-联系C++
+练习C++
